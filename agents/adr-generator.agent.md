@@ -66,8 +66,8 @@ title: "ADR-NNNN: [Decision Title]"
 status: "Proposed"
 date: "YYYY-MM-DD"
 authors: "[Stakeholder Names/Roles]"
-authored_by: "frontier-model | local-model"  # honnête, jamais vide — voir docs/methodology/PRD-ADR-PLAN-RUNBOOK-WORKFLOW.md
-execution_mode: "hermes-solo | hermes-orchestrator-openhands"  # figé avant Implementation Notes
+authored_by: "frontier-model | local-model"  # honest, never empty — see docs/methodology/PRD-ADR-PLAN-RUNBOOK-WORKFLOW.md
+execution_mode: "hermes-solo | hermes-orchestrator-openhands"  # locked before Implementation Notes
 tags: ["architecture", "decision"]
 supersedes: ""
 superseded_by: ""
