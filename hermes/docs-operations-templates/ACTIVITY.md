@@ -1,11 +1,11 @@
-# ACTIVITY — Journal des checkpoints (append-only)
+# ACTIVITY — Checkpoint log (append-only)
 
-> Une ligne par checkpoint obligatoire (cf. `.hermes.md` § Mandatory checkpoint
-> boundaries). Ne jamais réécrire l'historique — ajouter seulement.
+> One line per mandatory checkpoint (see `.hermes.md` § Mandatory checkpoint
+> boundaries). Never rewrite history — only append.
 
-<!-- Format suggéré :
-## YYYY-MM-DD HH:MM — <titre court du checkpoint>
-- Déclencheur : <fin de sous-tâche | validation | avant refacto | avant délégation | échec outil | seuil 55%>
-- État : <une ou deux lignes>
-- Prochaine action : <une ligne>
+<!-- Suggested format:
+## YYYY-MM-DD HH:MM — <short checkpoint title>
+- Trigger: <subtask completed | validation | before refactor | before delegation | tool failure | 55% threshold>
+- State: <one or two lines>
+- Next action: <one line>
 -->

@@ -1,41 +1,41 @@
-# Conventions de Commits — itshaker
+# Commit Conventions — itshaker
 
 ## Format
 
 ```
 <type>(<scope>): <description>
 
-[corps optionnel]
+[optional body]
 
-[pied de page optionnel]
+[optional footer]
 ```
 
-## Types autorisés
+## Allowed types
 
 | Type | Usage |
 |------|-------|
-| `feat` | Nouvelle fonctionnalité |
-| `fix` | Correction de bug |
-| `docs` | Documentation uniquement |
-| `style` | Formatage (pas de changement fonctionnel) |
-| `refactor` | Refactoring sans ajout de feature ni fix |
-| `perf` | Amélioration de performance |
-| `test` | Ajout ou modification de tests |
-| `chore` | Maintenance, build, dépendances |
-| `ci` | Changements CI/CD |
-| `revert` | Revert d'un commit précédent |
-| `security` | Correctif de sécurité |
+| `feat` | New feature |
+| `fix` | Bug fix |
+| `docs` | Documentation only |
+| `style` | Formatting (no functional change) |
+| `refactor` | Refactoring with no feature added and no fix |
+| `perf` | Performance improvement |
+| `test` | Adding or modifying tests |
+| `chore` | Maintenance, build, dependencies |
+| `ci` | CI/CD changes |
+| `revert` | Revert of a previous commit |
+| `security` | Security fix |
 
-## Règles
+## Rules
 
-- **Ligne de titre ≤ 72 caractères**
-- **Impératif** : "Add feature" pas "Added feature"
-- **Pas de majuscule** après le type
-- **Pas de point final**
-- **Scope optionnel** mais recommandé : `feat(auth):`, `fix(api):`
-- **Breaking changes** : ajouter `!` après le type/scope et décrire en pied de page
+- **Title line ≤ 72 characters**
+- **Imperative mood**: "Add feature" not "Added feature"
+- **No capital letter** after the type
+- **No trailing period**
+- **Optional but recommended scope**: `feat(auth):`, `fix(api):`
+- **Breaking changes**: add `!` after the type/scope and describe in the footer
 
-## Exemples
+## Examples
 
 ```bash
 feat(agents): add adr-generator agent integration
@@ -45,8 +45,8 @@ chore: update dependencies to latest patch versions
 refactor(core)!: extract config module — breaking change in config path
 ```
 
-## Outils recommandés
+## Recommended tools
 
 - [Commitizen](https://commitizen-tools.github.io/commitizen/)
 - [Conventional Commits](https://www.conventionalcommits.org/)
-- Pré-commit hook : `commitlint` ou équivalent
+- Pre-commit hook: `commitlint` or equivalent

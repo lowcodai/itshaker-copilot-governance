@@ -1,37 +1,37 @@
-# Conventions de Nommage — itshaker
+# Naming Conventions — itshaker
 
 ## Repositories
 
-| Pattern | Exemple | Usage |
+| Pattern | Example | Usage |
 |---------|---------|-------|
-| `itshaker-template-<type>` | `itshaker-template-base` | Templates GitHub |
-| `itshaker-<function>` | `itshaker-bootstrap` | Outils internes |
-| `<projet>-<stack>` | `mon-api-node`, `mon-infra-aws` | Projets métier |
+| `itshaker-template-<type>` | `itshaker-template-base` | GitHub templates |
+| `itshaker-<function>` | `itshaker-bootstrap` | Internal tools |
+| `<project>-<stack>` | `my-api-node`, `my-infra-aws` | Business projects |
 
 ## Branches
 
-| Pattern | Exemple | Usage |
+| Pattern | Example | Usage |
 |---------|---------|-------|
-| `main` | `main` | Branche principale (protégée) |
-| `feat/<slug>` | `feat/add-user-auth` | Nouvelles fonctionnalités |
-| `fix/<slug>` | `fix/login-crash` | Corrections de bugs |
+| `main` | `main` | Main branch (protected) |
+| `feat/<slug>` | `feat/add-user-auth` | New features |
+| `fix/<slug>` | `fix/login-crash` | Bug fixes |
 | `chore/<slug>` | `chore/update-deps` | Maintenance |
 | `docs/<slug>` | `docs/update-api-spec` | Documentation |
-| `hotfix/<slug>` | `hotfix/critical-security` | Correctifs urgents |
+| `hotfix/<slug>` | `hotfix/critical-security` | Urgent fixes |
 
-## Fichiers et répertoires
+## Files and directories
 
-- **Fichiers** : `kebab-case` pour les fichiers Markdown et config, `snake_case` pour les scripts shell
-- **Répertoires** : `kebab-case` (ex: `docs/adr/`, `my-module/`)
-- **Secrets** : jamais dans les noms de fichiers, jamais commités
+- **Files**: `kebab-case` for Markdown and config files, `snake_case` for shell scripts
+- **Directories**: `kebab-case` (e.g. `docs/adr/`, `my-module/`)
+- **Secrets**: never in file names, never committed
 
-## Variables d'environnement
+## Environment variables
 
-- `SCREAMING_SNAKE_CASE` (ex: `DATABASE_URL`, `API_KEY`)
-- Préfixe par domaine : `GITHUB_*`, `APP_*`, `AWS_*`
+- `SCREAMING_SNAKE_CASE` (e.g. `DATABASE_URL`, `API_KEY`)
+- Prefixed by domain: `GITHUB_*`, `APP_*`, `AWS_*`
 
-## Labels GitHub
+## GitHub Labels
 
-Voir `config/labels.yml` dans itshaker-bootstrap.
+See `config/labels.yml` in itshaker-bootstrap.
 
-Format : `<catégorie>: <valeur>` (ex: `type: bug`, `priority: high`)
+Format: `<category>: <value>` (e.g. `type: bug`, `priority: high`)

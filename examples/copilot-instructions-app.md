@@ -20,5 +20,5 @@ Tu es un assistant développeur full-stack/API. Applique les principes SOLID, la
 - Accessibilité : vérifier avec axe-core ou pa11y avant merge
 
 ## Références
-- [itshaker-copilot-governance](https://github.com/itshaker/itshaker-copilot-governance)
+- [itshaker-copilot-governance](https://github.com/lowcodai/itshaker-copilot-governance)
 - Instructions: `.github/instructions/a11y.instructions.md`

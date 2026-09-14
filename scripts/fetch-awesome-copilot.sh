@@ -1,23 +1,23 @@
 #!/usr/bin/env bash
-# scripts/fetch-awesome-copilot.sh — Télécharge les éléments awesome-copilot dans governance
+# scripts/fetch-awesome-copilot.sh — Downloads the awesome-copilot elements into governance
 # Usage: ./scripts/fetch-awesome-copilot.sh [--ref <sha>] [--dry-run]
 #
-# Ce script peuple le repo itshaker-copilot-governance depuis github/awesome-copilot.
-# À lancer une fois à l'initialisation, puis lors des mises à jour.
+# This script populates the itshaker-copilot-governance repo from github/awesome-copilot.
+# Run it once at initialization, then again for updates.
 
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 GOVERNANCE_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
 
-# Charger les libs depuis bootstrap si disponible
+# Load the libs from bootstrap if available
 BOOTSTRAP_LIB="${GOVERNANCE_DIR}/../itshaker-bootstrap/scripts/lib"
 if [[ -d "$BOOTSTRAP_LIB" ]]; then
   source "${BOOTSTRAP_LIB}/log.sh"
   source "${BOOTSTRAP_LIB}/fs.sh"
   source "${BOOTSTRAP_LIB}/gh.sh"
 else
-  # Fallback log minimal si bootstrap absent
+  # Minimal fallback logging if bootstrap is absent
   log_info()    { echo "[INFO] $*"; }
   log_success() { echo "[OK]   $*"; }
   log_warn()    { echo "[WARN] $*" >&2; }
@@ -38,7 +38,7 @@ parse_args() {
       --dry-run)      DRY_RUN=true; shift ;;
       --extend-only)  EXTEND_ONLY=true; shift ;;
       --verbose)      VERBOSE=true; shift ;;
-      *) echo "[ERROR] Argument inconnu: $1"; exit 1 ;;
+      *) echo "[ERROR] Unknown argument: $1"; exit 1 ;;
     esac
   done
 }
@@ -52,18 +52,18 @@ fetch_file() {
   fi
 
   if [[ "${DRY_RUN:-false}" == "true" ]]; then
-    log_dry "Télécharger: github/awesome-copilot/$repo_path → $dest"
+    log_dry "Download: github/awesome-copilot/$repo_path → $dest"
     return 0
   fi
 
   mkdir -p "$(dirname "$dest")"
   local url="https://raw.githubusercontent.com/github/awesome-copilot/${REF}/${repo_path}"
   if curl --fail --silent --max-time 30 "$url" -o "$dest"; then
-    log_success "Téléchargé: $dest"
+    log_success "Downloaded: $dest"
   else
-    log_warn "Échec: $url — placeholder créé"
+    log_warn "Failed: $url — placeholder created"
     echo "# PLACEHOLDER — Source: $url" > "$dest"
-    echo "# Télécharger manuellement et remplacer ce fichier." >> "$dest"
+    echo "# Download manually and replace this file." >> "$dest"
   fi
 }
 
@@ -71,12 +71,12 @@ fetch_dir() {
   local repo_path="$1" dest_dir="$2"
 
   if [[ "${DRY_RUN:-false}" == "true" ]]; then
-    log_dry "Télécharger répertoire: github/awesome-copilot/$repo_path → $dest_dir"
+    log_dry "Download directory: github/awesome-copilot/$repo_path → $dest_dir"
     return 0
   fi
 
   if ! command -v gh &>/dev/null; then
-    log_warn "gh CLI requis pour télécharger des répertoires. Installer: https://cli.github.com/"
+    log_warn "gh CLI required to download directories. Install: https://cli.github.com/"
     mkdir -p "$dest_dir"
     echo "# PLACEHOLDER — Source: github/awesome-copilot/$repo_path (ref: $REF)" > "$dest_dir/README.md"
     return 0
@@ -86,7 +86,7 @@ fetch_dir() {
   local files
   files=$(gh api "repos/github/awesome-copilot/contents/${repo_path}?ref=${REF}" \
     --jq '.[].path' 2>/dev/null) || {
-    log_warn "Répertoire non trouvé: $repo_path"
+    log_warn "Directory not found: $repo_path"
     return 0
   }
 
@@ -104,11 +104,11 @@ fetch_dir() {
     local content
     content=$(gh api "repos/github/awesome-copilot/contents/${file_path}?ref=${REF}" \
       --jq '.content' 2>/dev/null | base64 -d 2>/dev/null) || {
-      log_warn "Impossible de télécharger: $file_path"
+      log_warn "Unable to download: $file_path"
       continue
     }
     echo "$content" > "$dest"
-    log_success "Téléchargé: $dest"
+    log_success "Downloaded: $dest"
   done <<< "$files"
 }
 
@@ -197,10 +197,10 @@ main() {
     fetch_dir "plugins/${plugin}" "${GOVERNANCE_DIR}/plugins/${plugin}"
   done
 
-  log_section "Fetch terminé"
-  log_info "Répertoire: $GOVERNANCE_DIR"
+  log_section "Fetch complete"
+  log_info "Directory: $GOVERNANCE_DIR"
   log_info "Ref: $REF"
-  log_warn "Vérifier les placeholders créés pour les éléments non téléchargeables"
+  log_warn "Check the placeholders created for elements that could not be downloaded"
 }
 
 main "$@"

@@ -1,11 +1,11 @@
-# Politique de Protection des Branches — itshaker
+# Branch Protection Policy — itshaker
 
-## Règles pour `main`
+## Rules for `main`
 
-À configurer via GitHub Branch Protection Rules ou Ruleset :
+Configure via GitHub Branch Protection Rules or Ruleset:
 
 ```yaml
-# Via GitHub Rulesets (recommandé)
+# Via GitHub Rulesets (recommended)
 - require_pull_request: true
   required_approving_review_count: 1
   dismiss_stale_reviews: true
@@ -13,10 +13,10 @@
   required_checks:
     - ci
     - governance-check
-- require_linear_history: false  # squash and merge suffit
+- require_linear_history: false  # squash and merge is enough
 - block_force_pushes: true
 - block_deletions: true
-- require_signed_commits: false  # optionnel, recommandé pour projets sensibles
+- require_signed_commits: false  # optional, recommended for sensitive projects
 ```
 
 ## Configuration via GitHub CLI
@@ -32,11 +32,11 @@ gh api repos/{owner}/{repo}/branches/main/protection \
 
 ## Session Auto-Commit
 
-Le hook `session-auto-commit` est **interdit sur `main`**.
-Il ne doit jamais être configuré sans branche feature dédiée.
+The `session-auto-commit` hook is **forbidden on `main`**.
+It must never be configured without a dedicated feature branch.
 
-## Environnements de déploiement
+## Deployment environments
 
-Configurer des environnements GitHub avec protection pour `production` :
-- Reviewers requis
-- Wait timer recommandé (15 minutes minimum)
+Configure GitHub environments with protection for `production`:
+- Required reviewers
+- Recommended wait timer (15 minutes minimum)

@@ -1,35 +1,35 @@
 ## Description
 
-<!-- Décrire les changements apportés par cette PR -->
+<!-- Describe the changes introduced by this PR -->
 
-## Type de changement
+## Type of change
 
 - [ ] 🐛 Bug fix
-- [ ] ✨ Nouvelle fonctionnalité
+- [ ] ✨ New feature
 - [ ] 📝 Documentation
 - [ ] 🔧 Maintenance / refactoring
-- [ ] 🔒 Sécurité
+- [ ] 🔒 Security
 - [ ] 🏗️ Infrastructure
-- [ ] 🤖 Généré/assisté par IA (révision humaine confirmée)
+- [ ] 🤖 Generated/assisted by AI (human review confirmed)
 
 ## Checklist
 
-- [ ] Le code respecte les conventions du projet
-- [ ] Les tests passent localement
-- [ ] La documentation est à jour (README, CHANGELOG, ADR si applicable)
-- [ ] **Aucun secret n'est inclus dans ce commit**
-- [ ] Le code généré par IA a été relu et validé
-- [ ] Les ADR nécessaires ont été créés (si décision d'architecture)
-- [ ] Les issues liées sont référencées
+- [ ] The code follows the project's conventions
+- [ ] Tests pass locally
+- [ ] Documentation is up to date (README, CHANGELOG, ADR if applicable)
+- [ ] **No secret is included in this commit**
+- [ ] AI-generated code has been reviewed and validated
+- [ ] Required ADRs have been created (if an architecture decision was made)
+- [ ] Related issues are referenced
 
-## Issues liées
+## Related issues
 
-Closes #<!-- numéro d'issue -->
+Closes #<!-- issue number -->
 
-## Tests effectués
+## Tests performed
 
-<!-- Décrire les tests réalisés: manuels, unitaires, intégration -->
+<!-- Describe the tests performed: manual, unit, integration -->
 
-## Notes pour le reviewer
+## Notes for the reviewer
 
-<!-- Information contextuelle utile pour la revue -->
+<!-- Useful contextual information for the review -->

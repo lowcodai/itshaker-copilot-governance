@@ -1,21 +1,21 @@
 name: ✨ Feature Request
-description: Proposer une nouvelle fonctionnalité
+description: Propose a new feature
 labels: ["type: feature"]
 body:
   - type: textarea
     id: problem
     attributes:
-      label: Problème à résoudre
+      label: Problem to solve
     validations:
       required: true
   - type: textarea
     id: solution
     attributes:
-      label: Solution proposée
+      label: Proposed solution
     validations:
       required: true
   - type: dropdown
     id: priority
     attributes:
-      label: Priorité
-      options: ["Critique", "Haute", "Moyenne", "Basse"]
+      label: Priority
+      options: ["Critical", "High", "Medium", "Low"]

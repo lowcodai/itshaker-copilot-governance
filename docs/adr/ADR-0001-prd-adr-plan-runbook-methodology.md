@@ -1,7 +1,7 @@
 # ADR-0001 — Adopter la chaîne PRD → ADR → Plan → Runbook, avec deux modes d'exécution
 
 **Date:** 2026-09-14
-**Statut:** Proposé
+**Statut:** Proposé — Superseded by ADR-0002 (language policy)
 **Décideurs:** Capitaine (Jérémie Coste), Arcane (Hermes)
 **Contexte technique:** gouvernance itshaker (templates, agents Copilot, méthodologie) — repo `itshaker-copilot-governance`.
 **authored_by:** frontier-model (cet ADR est rédigé par Claude Sonnet 5 dans ce plan)

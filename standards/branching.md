@@ -1,54 +1,54 @@
-# Standards — Conventions de branches
+# Standards — Branching Conventions
 
-## Modèle de branches
+## Branch model
 
 ```
-main          ← branche de production (protégée, merge uniquement via PR)
-develop       ← branche d'intégration (optionnelle selon la taille du projet)
-feat/*        ← nouvelles fonctionnalités
-fix/*         ← corrections de bugs
+main          ← production branch (protected, merge only via PR)
+develop       ← integration branch (optional depending on project size)
+feat/*        ← new features
+fix/*         ← bug fixes
 docs/*        ← documentation
 chore/*       ← maintenance, refactoring
-hotfix/*      ← correctifs urgents en production
+hotfix/*      ← urgent production fixes
 ```
 
-## Règles
+## Rules
 
-- `main` est protégé : aucun push direct, PR obligatoire
-- Les PRs sur `main` nécessitent au moins 1 approbation
-- Les PRs doivent passer les checks CI avant merge
-- Supprimer les branches après merge
-- Nommer les branches en kebab-case minuscule : `feat/mon-composant`
+- `main` is protected: no direct push, PR required
+- PRs on `main` require at least 1 approval
+- PRs must pass CI checks before merge
+- Delete branches after merge
+- Name branches in lowercase kebab-case: `feat/my-component`
 
-## Conventions de nommage
+## Naming conventions
 
 ```
-<type>/<description-courte>
+<type>/<short-description>
 
-Exemples:
+Examples:
   feat/auth-jwt
   fix/memory-leak-cache
   docs/adr-0002-database-choice
   chore/update-dependencies
 ```
 
-## Commits conventionnels
+## Conventional commits
 
-Format : `<type>(<scope>): <description>`
+Format: `<type>(<scope>): <description>`
 
-Types acceptés :
-- `feat` — nouvelle fonctionnalité
-- `fix` — correction de bug
+Accepted types:
+- `feat` — new feature
+- `fix` — bug fix
 - `docs` — documentation
 - `chore` — maintenance
-- `refactor` — refactoring sans changement de comportement
-- `test` — ajout/modification de tests
+- `refactor` — refactoring with no behavior change
+- `test` — adding/modifying tests
 - `ci` — CI/CD
 - `build` — build system
-- `perf` — amélioration de performance
-- `style` — formatage
+- `perf` — performance improvement
+- `style` — formatting
 
-Exemples :
+Examples:
 ```
 feat(auth): add JWT token refresh
 fix(api): handle null response from external service
@@ -58,7 +58,7 @@ chore: update awesome-copilot to dae77f24
 
 ## Branch Protection (GitHub)
 
-Configurer via GitHub Settings > Branches :
+Configure via GitHub Settings > Branches:
 - Required status checks: `ci`, `governance-check`
 - Require pull request reviews: 1
 - Dismiss stale pull request approvals

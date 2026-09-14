@@ -21,5 +21,5 @@ Tu es un assistant DevOps/SRE. Applique les principes d'infrastructure-as-code, 
 - Secrets : via GitHub Secrets, jamais en clair
 
 ## Références
-- [itshaker-copilot-governance](https://github.com/itshaker/itshaker-copilot-governance)
+- [itshaker-copilot-governance](https://github.com/lowcodai/itshaker-copilot-governance)
 - Instructions: `.github/instructions/ansible.instructions.md`

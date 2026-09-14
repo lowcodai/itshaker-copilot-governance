@@ -1,18 +1,18 @@
-# Carte de répartition Awesome Copilot par type de projet
+# Awesome Copilot Distribution Map by Project Type
 
 Source: [github/awesome-copilot](https://github.com/github/awesome-copilot)
-SHA de référence: `dae77f24132c1d686c30fd5b29aee0d63668d1d2`
+Reference SHA: `dae77f24132c1d686c30fd5b29aee0d63668d1d2`
 
 ## Hooks
 
 | Hook | base | infra | ai | app | Notes |
 |------|:----:|:-----:|:--:|:---:|-------|
-| `tool-guardian` | ✓ | ✓ | ✓ | ✓ | Universel |
-| `secrets-scanner` | ✓ | ✓ | ✓ | ✓ | Universel |
-| `governance-audit` | ✓ | ✓ | ✓ | ✓ | Universel |
-| `dependency-license-checker` | — | ✓ | ✓ | ✓ | Projets avec dépendances |
+| `tool-guardian` | ✓ | ✓ | ✓ | ✓ | Universal |
+| `secrets-scanner` | ✓ | ✓ | ✓ | ✓ | Universal |
+| `governance-audit` | ✓ | ✓ | ✓ | ✓ | Universal |
+| `dependency-license-checker` | — | ✓ | ✓ | ✓ | Projects with dependencies |
 | `fix-broken-links` | ✓ | — | ✓ | ✓ | Documentation |
-| `session-logger` | — | — | ✓ | — | Sessions IA |
+| `session-logger` | — | — | ✓ | — | AI sessions |
 | `attester-import-check` | — | ✓ | ✓ | — | Supply chain |
 | `session-auto-commit` | — | — | opt | — | Feature branch ONLY |
 
@@ -73,4 +73,4 @@ SHA de référence: `dae77f24132c1d686c30fd5b29aee0d63668d1d2`
 | `ai-prompt-engineering-safety-best-practices` | — | — | ✓ | — |
 | `a11y` | — | — | — | ✓ |
 
-> Légende: `✓` inclus par défaut, `opt` optionnel, `—` non applicable
+> Legend: `✓` included by default, `opt` optional, `—` not applicable

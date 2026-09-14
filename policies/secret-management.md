@@ -1,18 +1,18 @@
-# Politique — Gestion des secrets
+# Policy — Secret Management
 
-## Règles absolues
+## Absolute rules
 
-1. **Aucun secret dans le code source** — jamais, sans exception
-2. **Aucun secret dans les variables d'environnement commiteées**
-3. **Aucun secret dans les prompts Copilot ou contextes partagés**
+1. **No secrets in source code** — ever, no exception
+2. **No secrets in committed environment variables**
+3. **No secrets in Copilot prompts or shared contexts**
 
-## Où stocker les secrets
+## Where to store secrets
 
-- **Développement local:** `.env` (dans `.gitignore`)
+- **Local development:** `.env` (in `.gitignore`)
 - **CI/CD:** GitHub Actions Secrets (`gh secret set`)
 - **Production:** Secret Manager (AWS Secrets Manager, Azure Key Vault, HashiCorp Vault)
 
-## Fichiers à toujours ignorer (.gitignore)
+## Files to always ignore (.gitignore)
 
 ```
 .env
@@ -25,20 +25,20 @@ secrets.yml
 secrets.yaml
 ```
 
-## Vérification automatique
+## Automatic verification
 
-Le hook `secrets-scanner` (depuis awesome-copilot) scanne automatiquement les fichiers avant commit.
+The `secrets-scanner` hook (from awesome-copilot) automatically scans files before commit.
 
-Patterns détectés :
-- Clés AWS (`AKIA...`)
-- Tokens GitHub (`ghp_...`, `gho_...`)
-- Clés API génériques
-- Mots de passe hardcodés
-- Certificats privés
+Detected patterns:
+- AWS keys (`AKIA...`)
+- GitHub tokens (`ghp_...`, `gho_...`)
+- Generic API keys
+- Hardcoded passwords
+- Private certificates
 
-## En cas de secret leaké
+## In case of a leaked secret
 
-1. Révoquer immédiatement le secret
-2. Contacter l'équipe sécurité
-3. Utiliser GitHub Secret Scanning pour identifier l'exposition
-4. Réécrire l'historique git si nécessaire (procédure: `git filter-repo`)
+1. Revoke the secret immediately
+2. Contact the security team
+3. Use GitHub Secret Scanning to identify the exposure
+4. Rewrite git history if necessary (procedure: `git filter-repo`)
