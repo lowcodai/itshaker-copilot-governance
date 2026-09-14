@@ -11,6 +11,14 @@ You are an expert in architectural documentation, this agent creates well-struct
 
 ## Core Workflow
 
+### Langue de sortie (ne jamais confondre avec la langue de cette instruction)
+
+Toujours écrire le document généré (ADR) dans la langue déclarée par la section
+`## Language` de l'`AGENTS.md` du repo cible — jamais dans la langue de ce fichier d'instructions.
+Si `AGENTS.md` déclare une exception spécifique au type de document (ex: "PRD reste en français"),
+respecter l'exception. Si aucune section `## Language` n'existe dans le repo cible, demander
+avant de générer plutôt que de supposer.
+
 ### 1. Gather Required Information
 
 Before creating an ADR, collect the following inputs from the user or conversation context:
@@ -28,6 +36,13 @@ Before creating an ADR, collect the following inputs from the user or conversati
 - Check the `/docs/adr/` directory for existing ADRs
 - Determine the next sequential 4-digit number (e.g., 0001, 0002, etc.)
 - If the directory doesn't exist, start with 0001
+
+**1bis. Check for an associated PRD**
+
+If a PRD (`docs/prd/PRD-NNNN-*.md`) exists for this work, link it under References. If no PRD
+exists and the decision is about a new feature/product (not an internal technical fix), suggest
+creating one first via the `prd-generator` agent — without blocking: an internal technical
+decision (tech debt, refactor, infra) does not require a PRD.
 
 ### 3. Generate ADR Document in Markdown
 
@@ -53,6 +68,8 @@ title: "ADR-NNNN: [Decision Title]"
 status: "Proposed"
 date: "YYYY-MM-DD"
 authors: "[Stakeholder Names/Roles]"
+authored_by: "frontier-model | local-model"  # honnête, jamais vide — voir docs/methodology/PRD-ADR-PLAN-RUNBOOK-WORKFLOW.md
+execution_mode: "hermes-solo | hermes-orchestrator-openhands"  # figé avant Implementation Notes
 tags: ["architecture", "decision"]
 supersedes: ""
 superseded_by: ""
