@@ -1,30 +1,30 @@
-# CURRENT — État de la tâche active
+# CURRENT — Active task state
 
-> Squelette. Mis à jour à chaque checkpoint (cf. `.hermes.md`). Une seule tâche active à
-> la fois ; archiver ou clore avant d'en démarrer une nouvelle.
+> Skeleton. Updated at every checkpoint (see `.hermes.md`). Only one active task at a
+> time; archive or close it before starting a new one.
 
-## Tâche active
+## Active task
 
-- **Objectif :**
-- **Démarrée le :**
-- **Contexte / repo(s) touché(s) :**
+- **Objective:**
+- **Started on:**
+- **Context / repo(s) affected:**
 
-## Fait
-
--
-
-## En cours
+## Done
 
 -
 
-## Prochaine action exécutable
+## In progress
 
 -
 
-## Risques / points ouverts
+## Next executable action
 
 -
 
-## Fichiers modifiés (non commités ou en attente de revue)
+## Risks / open points
+
+-
+
+## Modified files (uncommitted or pending review)
 
 -

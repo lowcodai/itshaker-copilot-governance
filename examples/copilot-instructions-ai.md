@@ -1,31 +1,31 @@
-# Exemples d'instructions Copilot — Projet IA
+# Copilot Instructions Examples — AI Project
 
-> Copier ce fichier dans `.github/copilot-instructions.md` du projet cible
+> Copy this file into the target project's `.github/copilot-instructions.md`
 
 ```markdown
-# Instructions Copilot — {{REPO_NAME}}
+# Copilot Instructions — {{REPO_NAME}}
 
-## Contexte du projet
-Projet IA utilisant [décrire: LLM, MCP, RAG, agents...].
+## Project Context
+AI project using [describe: LLM, MCP, RAG, agents...].
 
-## Contraintes de sécurité IA
-- Toujours appliquer les principes du prompt engineering responsable
-- Vérifier la conformité OWASP Top 10 for LLMs
-- Documenter les décisions de modèles en ADR
-- Session-auto-commit uniquement sur branches feature, jamais sur main
+## AI Security Constraints
+- Always apply responsible prompt engineering principles
+- Check compliance with the OWASP Top 10 for LLMs
+- Document model decisions in an ADR
+- Session-auto-commit only on feature branches, never on main
 
-## Agents disponibles
-- `@ai-readiness-reporter` — Rapport de maturité AI Readiness
-- `@agent-governance-reviewer` — Revue de gouvernance des agents
-- `@ai-team-dev` — Équipe de développement IA
+## Available Agents
+- `@ai-readiness-reporter` — AI Readiness maturity report
+- `@agent-governance-reviewer` — Agent governance review
+- `@ai-team-dev` — AI development team
 - `@adr-generator` — Architecture Decision Records
 
-## Standards de prompts
-- Pas de données sensibles dans les prompts
-- Documenter les prompts dans prompts/
-- Versionner les prompts avec le code
-- Évaluer les prompts avec arize-evaluator si applicable
+## Prompt Standards
+- No sensitive data in prompts
+- Document prompts in prompts/
+- Version prompts with the code
+- Evaluate prompts with arize-evaluator if applicable
 
-## Gouvernance
-Référencer: https://github.com/itshaker/itshaker-copilot-governance/policies/ai-usage-policy.md
+## Governance
+Reference: https://github.com/lowcodai/itshaker-copilot-governance/policies/ai-usage-policy.md
 ```

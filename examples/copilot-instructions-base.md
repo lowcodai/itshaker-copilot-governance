@@ -1,26 +1,26 @@
-# Exemples d'instructions Copilot — Projet Base
+# Copilot Instructions Examples — Base Project
 
-> Copier ce fichier dans `.github/copilot-instructions.md` du projet cible
+> Copy this file into the target project's `.github/copilot-instructions.md`
 
 ```markdown
-# Instructions Copilot — {{REPO_NAME}}
+# Copilot Instructions — {{REPO_NAME}}
 
-## Contexte du projet
-<!-- Décrire en 2-3 phrases ce que fait ce projet -->
+## Project Context
+<!-- Describe in 2-3 sentences what this project does -->
 
 ## Standards
-- Conventional commits obligatoires
-- Revue humaine de tout code généré par IA
-- Pas de secrets dans le code ou les prompts
-- Documentation ADR pour les décisions d'architecture
+- Conventional commits mandatory
+- Human review of all AI-generated code
+- No secrets in code or prompts
+- ADR documentation for architecture decisions
 
-## Style de code
-<!-- Décrire le style attendu: langages, frameworks, conventions -->
+## Code Style
+<!-- Describe the expected style: languages, frameworks, conventions -->
 
-## Agents disponibles
-- `@adr-generator` — Pour créer des Architecture Decision Records
-- `@devops-expert` — Pour les questions CI/CD et infrastructure
+## Available Agents
+- `@adr-generator` — For creating Architecture Decision Records
+- `@devops-expert` — For CI/CD and infrastructure questions
 
-## Instructions spécifiques
-<!-- Ajouter ici les instructions propres à ce projet -->
+## Project-Specific Instructions
+<!-- Add instructions specific to this project here -->
 ```

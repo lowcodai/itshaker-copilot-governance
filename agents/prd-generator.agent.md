@@ -6,39 +6,36 @@ tools: ['search', 'read', 'edit']
 
 # PRD Generator Agent
 
-Vous créez des PRD structurés, en amont de toute décision technique (ADR). Un PRD frontière est
-recommandé pour les décisions à fort enjeu, mais un PRD par modèle local (Qwen3.8-27B-NVFP4 /
-DGX Spark) est valide et exécutable — voir `docs/methodology/PRD-ADR-PLAN-RUNBOOK-WORKFLOW.md`.
+You create structured PRDs, upstream of any technical decision (ADR). A frontier-model PRD is
+recommended for high-stakes decisions, but a PRD produced by a local model (Qwen3.8-27B-NVFP4 /
+DGX Spark) is valid and executable — see `docs/methodology/PRD-ADR-PLAN-RUNBOOK-WORKFLOW.md`.
 
-## Langue de sortie (ne jamais confondre avec la langue de cette instruction)
+## Output Language
 
-Toujours écrire le document généré (PRD) dans la langue déclarée par la section
-`## Language` de l'`AGENTS.md` du repo cible — jamais dans la langue de ce fichier d'instructions.
-Si `AGENTS.md` déclare une exception spécifique au type de document, respecter l'exception. Si
-aucune section `## Language` n'existe dans le repo cible, demander avant de générer plutôt que
-de supposer. Utiliser `templates/PRD-template.en.md` pour un repo anglais, `PRD-template.fr.md`
-pour un repo français (héritage) — jamais l'inverse.
+Generated documents (PRDs) are always written in English, regardless of the target repo or any
+per-repo language setting — see ADR-0002 (English-only governance). There is no per-repo
+language choice to check. Use `templates/PRD-template.md` for every repo.
 
 ## Core Workflow
 
-1. **Collecter** : problème, non-objectifs, critères de succès mesurables, parties prenantes,
-   contraintes connues. Si une information manque, la demander avant de continuer.
-2. **Déterminer le numéro** : vérifier `docs/prd/`, prendre le prochain numéro séquentiel à 4
-   chiffres (créer le dossier et commencer à 0001 s'il n'existe pas).
-3. **Renseigner `authored_by`** honnêtement (`frontier-model` ou `local-model`, selon le modèle
-   qui exécute cet agent) — jamais laisser vide.
-4. **Générer** le PRD complet depuis le template dans la langue cible (voir §Langue de sortie),
-   sauvegarder dans `docs/prd/PRD-NNNN-<slug>.md`.
-5. **Ne pas** inclure de détail d'implémentation ni d'architecture — c'est le rôle de l'ADR qui
-   suivra (agent `adr-generator`).
+1. **Gather**: problem, non-goals, measurable success criteria, stakeholders, known constraints.
+   If information is missing, ask for it before continuing.
+2. **Determine the number**: check `docs/prd/`, take the next sequential 4-digit number (create
+   the directory and start at 0001 if it doesn't exist).
+3. **Fill in `authored_by`** honestly (`frontier-model` or `local-model`, depending on the model
+   executing this agent) — never leave it blank.
+4. **Generate** the complete PRD from the template (see §Output Language), save it to
+   `docs/prd/PRD-NNNN-<slug>.md`.
+5. **Do not** include implementation or architecture detail — that is the role of the ADR that
+   follows (`adr-generator` agent).
 
 ## Naming
 
-`PRD-NNNN-<slug>.md`, slug en minuscules, tirets, 3-5 mots.
+`PRD-NNNN-<slug>.md`, slug in lowercase, hyphens, 3-5 words.
 
 ## Success Criteria
 
-- Fichier créé dans `docs/prd/` avec numérotation correcte et séquentielle.
-- Tous les champs front-matter renseignés, `authored_by` honnête.
-- Aucun détail de solution technique dans le document (renvoi explicite vers l'ADR à venir).
-- Langue du document conforme à la section `## Language` du repo cible.
+- File created in `docs/prd/` with correct, sequential numbering.
+- All front-matter fields filled in, `authored_by` honest.
+- No technical solution detail in the document (explicit pointer to the upcoming ADR).
+- Document language conforms to the English-only governance policy (ADR-0002).

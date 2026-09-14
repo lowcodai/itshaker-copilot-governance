@@ -1,10 +1,10 @@
-# ADR — Architecture Decision Records de ce repo
+# ADR — Architecture Decision Records for this repo
 
-Convention de numérotation : `ADR-NNNN-<slug>.md`, séquence propre à ce repo, à partir de 0001.
-Ne jamais renuméroter un ADR accepté — un changement matériel crée un nouvel ADR qui supersède
-l'ancien (voir le processus détaillé dans `itshaker-dgx-spark-V2/docs/adr/README.md`, à adapter
-si ce repo a des besoins spécifiques).
+Numbering convention: `ADR-NNNN-<slug>.md`, a sequence specific to this repo, starting at 0001.
+Never renumber an accepted ADR — a material change creates a new ADR that supersedes the old
+one (see the detailed process in `itshaker-dgx-spark-V2/docs/adr/README.md`, to adapt if this
+repo has specific needs).
 
-Chaque ADR porte `authored_by` (frontier-model recommandé | local-model autorisé) et
-`execution_mode` (hermes-solo | hermes-orchestrator-openhands) — voir
-`templates/ADR-template.md` et `docs/methodology/PRD-ADR-PLAN-RUNBOOK-WORKFLOW.md`.
+Every ADR carries `authored_by` (frontier-model recommended | local-model allowed) and
+`execution_mode` (hermes-solo | hermes-orchestrator-openhands) — see
+`templates/ADR-template.md` and `docs/methodology/PRD-ADR-PLAN-RUNBOOK-WORKFLOW.md`.

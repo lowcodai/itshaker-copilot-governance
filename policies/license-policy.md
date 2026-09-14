@@ -1,40 +1,40 @@
-# Politique de Licences — itshaker
+# License Policy — itshaker
 
-## Licence par défaut
+## Default license
 
-Tous les repositories itshaker utilisent la licence **MIT** par défaut.
+All itshaker repositories use the **MIT** license by default.
 
-Pour les projets propriétaires ou sensibles : licence propriétaire explicite.
+For proprietary or sensitive projects: an explicit proprietary license.
 
-## Dépendances — licences autorisées
+## Dependencies — allowed licenses
 
-| Catégorie | Licences autorisées |
+| Category | Allowed licenses |
 |-----------|-------------------|
 | Open source | MIT, Apache 2.0, BSD 2-Clause, BSD 3-Clause, ISC, CC0 |
-| Documentaire | CC BY 4.0, CC BY-SA 4.0 |
-| Conditionnelle | LGPL (review requise — pas d'incorporation statique) |
+| Documentation | CC BY 4.0, CC BY-SA 4.0 |
+| Conditional | LGPL (review required — no static incorporation) |
 
-## Licences interdites
+## Forbidden licenses
 
-- GPL v2/v3 : contamination du code propriétaire
-- AGPL : restrictions sur les services réseau
-- Commons Clause : restrictions commerciales
-- Licences sans attribution claire
+- GPL v2/v3: contaminates proprietary code
+- AGPL: network service restrictions
+- Commons Clause: commercial restrictions
+- Licenses without clear attribution
 
-## Vérification automatique
+## Automatic verification
 
-Le hook `dependency-license-checker` vérifie les licences à chaque commit.
+The `dependency-license-checker` hook checks licenses on every commit.
 
-Configuration dans `.licensee.json` ou `.license-checker.yml` du projet.
+Configuration in the project's `.licensee.json` or `.license-checker.yml`.
 
-## Procédure pour exception
+## Exception procedure
 
-1. Ouvrir une issue avec le label `policy: license-exception`
-2. Décrire la dépendance et justifier l'exception
-3. Obtenir l'approbation d'un maintainer
-4. Documenter l'exception dans `SECURITY.md` du projet
+1. Open an issue with the `policy: license-exception` label
+2. Describe the dependency and justify the exception
+3. Get approval from a maintainer
+4. Document the exception in the project's `SECURITY.md`
 
-## Éléments Awesome Copilot
+## Awesome Copilot elements
 
-Les éléments issus de `github/awesome-copilot` sont sous licence MIT.
-Vérifier la licence de chaque élément avant usage.
+Elements sourced from `github/awesome-copilot` are MIT licensed.
+Check the license of each element before use.

@@ -1,5 +1,5 @@
 name: 🐛 Bug Report
-description: Signaler un bug
+description: Report a bug
 labels: ["type: bug"]
 body:
   - type: textarea
@@ -11,17 +11,17 @@ body:
   - type: textarea
     id: steps
     attributes:
-      label: Étapes de reproduction
+      label: Steps to reproduce
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: Comportement attendu
+      label: Expected behavior
     validations:
       required: true
   - type: dropdown
     id: priority
     attributes:
-      label: Priorité
-      options: ["Critique", "Haute", "Moyenne", "Basse"]
+      label: Priority
+      options: ["Critical", "High", "Medium", "Low"]

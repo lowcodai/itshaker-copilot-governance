@@ -1,45 +1,45 @@
-# Conventions de Pull Requests — itshaker
+# Pull Request Conventions — itshaker
 
-## Titre
+## Title
 
-Même format que les commits conventionnels :
+Same format as conventional commits:
 ```
 <type>(<scope>): <description>
 ```
 
-Exemple : `feat(auth): add OAuth2 support for GitHub`
+Example: `feat(auth): add OAuth2 support for GitHub`
 
 ## Description
 
-Utiliser le template `.github/PULL_REQUEST_TEMPLATE.md` de chaque repo.
+Use each repo's `.github/PULL_REQUEST_TEMPLATE.md` template.
 
-Sections obligatoires :
-1. **Description** — ce que fait cette PR
-2. **Type de changement** — feature, fix, breaking change, etc.
-3. **Tests** — comment tester
-4. **Checklist** — cases à cocher
+Required sections:
+1. **Description** — what this PR does
+2. **Change type** — feature, fix, breaking change, etc.
+3. **Tests** — how to test
+4. **Checklist** — checkboxes
 
-## Règles
+## Rules
 
-| Règle | Détail |
+| Rule | Detail |
 |-------|--------|
-| Taille | Préférer des PRs petites (< 400 lignes de diff) |
-| Reviewers | Au moins 1 reviewer humain obligatoire |
-| CI | Tous les checks doivent passer avant merge |
-| Squash | Squash and merge recommandé pour les branches feature |
-| Labels | Étiqueter chaque PR avec `type:` et `priority:` |
-| Draft | Utiliser Draft PR pour le WIP |
-| Copilot | Les suggestions Copilot doivent être revues, pas acceptées aveuglément |
+| Size | Prefer small PRs (< 400 diff lines) |
+| Reviewers | At least 1 human reviewer required |
+| CI | All checks must pass before merge |
+| Squash | Squash and merge recommended for feature branches |
+| Labels | Tag each PR with `type:` and `priority:` |
+| Draft | Use Draft PR for WIP |
+| Copilot | Copilot suggestions must be reviewed, never accepted blindly |
 
 ## Merge strategy
 
-- `main` : squash and merge (historique propre)
-- `release/*` : merge commit (traçabilité)
-- Jamais de force push sur `main`
+- `main`: squash and merge (clean history)
+- `release/*`: merge commit (traceability)
+- Never force push on `main`
 
-## Gouvernance IA
+## AI Governance
 
-Toute PR contenant du code IA (agents, prompts, modèles) doit :
-- Avoir le label `type: ai`
-- Inclure une section "AI Safety Review" dans la description
-- Référencer le skill `ai-prompt-engineering-safety-review` si des prompts sont modifiés
+Any PR containing AI code (agents, prompts, models) must:
+- Have the `type: ai` label
+- Include an "AI Safety Review" section in the description
+- Reference the `ai-prompt-engineering-safety-review` skill if prompts are modified

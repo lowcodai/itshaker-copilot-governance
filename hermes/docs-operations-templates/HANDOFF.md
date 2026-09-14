@@ -1,31 +1,31 @@
-# HANDOFF — Reprise de session
+# HANDOFF — Session resumption
 
-> Écrit uniquement en sortie sous pression de contexte (>= 82%, cf. `.hermes.md`) ou
-> rotation planifiée. Ne pas laisser de version périmée : à écraser à chaque nouvelle
-> sortie, ou à vider une fois la tâche reprise et confirmée.
+> Written only when exiting under context pressure (>= 82%, see `.hermes.md`) or a
+> planned rotation. Never leave a stale version: overwrite it on every new exit, or
+> clear it once the task has been resumed and confirmed.
 
-## État exact au moment de la sortie
+## Exact state at exit time
 
-- **Date/heure :**
-- **Tâche :**
-- **% fenêtre de contexte constaté :**
+- **Date/time:**
+- **Task:**
+- **Observed context window %:**
 
-## Fait
-
--
-
-## En cours (état précis, pas de résumé vague)
+## Done
 
 -
 
-## Prochaine action exécutable (la toute première commande/étape, pas une intention)
+## In progress (precise state, no vague summary)
 
 -
 
-## Fichiers touchés / commits en attente
+## Next executable action (the very first command/step, not an intention)
 
 -
 
-## Pièges à ne pas répéter dans la prochaine session
+## Affected files / pending commits
+
+-
+
+## Pitfalls not to repeat in the next session
 
 -

@@ -1,24 +1,24 @@
-# Exemple : copilot-instructions.md pour un projet app
+# Example: copilot-instructions.md for an app project
 
-> À placer dans `.github/copilot-instructions.md` du projet application.
+> Place this in the application project's `.github/copilot-instructions.md`.
 
 ---
 
-# Copilot Instructions — [NOM_PROJET] (App)
+# Copilot Instructions — [PROJECT_NAME] (App)
 
-## Rôle
-Tu es un assistant développeur full-stack/API. Applique les principes SOLID, la sécurité OWASP, et l'accessibilité WCAG 2.1 AA.
+## Role
+You are a full-stack/API developer assistant. Apply SOLID principles, OWASP security, and WCAG 2.1 AA accessibility.
 
 ## Stack
 - [LANGUAGE/FRAMEWORK]
 - Docker
-- PostgreSQL / [BASE DE DONNÉES]
+- PostgreSQL / [DATABASE]
 
 ## Conventions
-- Tests obligatoires pour toute nouvelle feature (coverage ≥ 80%)
-- Toute API REST doit avoir une spec OpenAPI à jour
-- Accessibilité : vérifier avec axe-core ou pa11y avant merge
+- Tests mandatory for every new feature (coverage ≥ 80%)
+- Every REST API must have an up-to-date OpenAPI spec
+- Accessibility: check with axe-core or pa11y before merge
 
-## Références
-- [itshaker-copilot-governance](https://github.com/itshaker/itshaker-copilot-governance)
+## References
+- [itshaker-copilot-governance](https://github.com/lowcodai/itshaker-copilot-governance)
 - Instructions: `.github/instructions/a11y.instructions.md`

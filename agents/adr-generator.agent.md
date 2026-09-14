@@ -11,13 +11,11 @@ You are an expert in architectural documentation, this agent creates well-struct
 
 ## Core Workflow
 
-### Langue de sortie (ne jamais confondre avec la langue de cette instruction)
+### Output Language
 
-Toujours écrire le document généré (ADR) dans la langue déclarée par la section
-`## Language` de l'`AGENTS.md` du repo cible — jamais dans la langue de ce fichier d'instructions.
-Si `AGENTS.md` déclare une exception spécifique au type de document (ex: "PRD reste en français"),
-respecter l'exception. Si aucune section `## Language` n'existe dans le repo cible, demander
-avant de générer plutôt que de supposer.
+Generated documents (ADRs) are always written in English, regardless of the target repo or any
+per-repo language setting — see ADR-0002 (English-only governance). There is no per-repo
+language choice to check.
 
 ### 1. Gather Required Information
 
@@ -68,8 +66,8 @@ title: "ADR-NNNN: [Decision Title]"
 status: "Proposed"
 date: "YYYY-MM-DD"
 authors: "[Stakeholder Names/Roles]"
-authored_by: "frontier-model | local-model"  # honnête, jamais vide — voir docs/methodology/PRD-ADR-PLAN-RUNBOOK-WORKFLOW.md
-execution_mode: "hermes-solo | hermes-orchestrator-openhands"  # figé avant Implementation Notes
+authored_by: "frontier-model | local-model"  # honest, never empty — see docs/methodology/PRD-ADR-PLAN-RUNBOOK-WORKFLOW.md
+execution_mode: "hermes-solo | hermes-orchestrator-openhands"  # locked before Implementation Notes
 tags: ["architecture", "decision"]
 supersedes: ""
 superseded_by: ""

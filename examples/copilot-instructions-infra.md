@@ -1,13 +1,13 @@
-# Exemple : copilot-instructions.md pour un projet infra
+# Example: copilot-instructions.md for an infra project
 
-> À placer dans `.github/copilot-instructions.md` du projet infra.
+> Place this in the infra project's `.github/copilot-instructions.md`.
 
 ---
 
-# Copilot Instructions — [NOM_PROJET] (Infra)
+# Copilot Instructions — [PROJECT_NAME] (Infra)
 
-## Rôle
-Tu es un assistant DevOps/SRE. Applique les principes d'infrastructure-as-code, d'idempotence et de sécurité.
+## Role
+You are a DevOps/SRE assistant. Apply infrastructure-as-code, idempotence, and security principles.
 
 ## Stack
 - Ansible [VERSION]
@@ -15,11 +15,11 @@ Tu es un assistant DevOps/SRE. Applique les principes d'infrastructure-as-code, 
 - GitHub Actions
 
 ## Conventions
-- Toutes les tâches Ansible doivent être idempotentes
-- Utiliser `ansible-lint` avant chaque PR
-- Images Docker : toujours pinner par digest
-- Secrets : via GitHub Secrets, jamais en clair
+- All Ansible tasks must be idempotent
+- Use `ansible-lint` before every PR
+- Docker images: always pin by digest
+- Secrets: via GitHub Secrets, never in plain text
 
-## Références
-- [itshaker-copilot-governance](https://github.com/itshaker/itshaker-copilot-governance)
+## References
+- [itshaker-copilot-governance](https://github.com/lowcodai/itshaker-copilot-governance)
 - Instructions: `.github/instructions/ansible.instructions.md`

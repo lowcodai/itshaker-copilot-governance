@@ -1,10 +1,10 @@
-# PRD — Product Requirement Documents de ce repo
+# PRD — Product Requirement Documents for this repo
 
-Convention de numérotation : `PRD-NNNN-<slug>.md`, séquence propre à ce repo, à partir de 0001.
+Numbering convention: `PRD-NNNN-<slug>.md`, a sequence specific to this repo, starting at 0001.
 
-Un PRD documente le **problème et les critères de succès**, pas la solution technique — voir
-`templates/PRD-template.md` et l'agent `prd-generator`. La solution technique est décidée dans
-un ADR associé (`docs/adr/`), qui référence ce PRD.
+A PRD documents the **problem and success criteria**, not the technical solution — see
+`templates/PRD-template.md` and the `prd-generator` agent. The technical solution is decided in
+an associated ADR (`docs/adr/`), which references this PRD.
 
-Méthodologie complète : voir `docs/methodology/PRD-ADR-PLAN-RUNBOOK-WORKFLOW.md` dans
-`itshaker-copilot-governance` (ou sa copie locale si synchronisée dans ce repo).
+Full methodology: see `docs/methodology/PRD-ADR-PLAN-RUNBOOK-WORKFLOW.md` in
+`itshaker-copilot-governance` (or its local copy if synced into this repo).
