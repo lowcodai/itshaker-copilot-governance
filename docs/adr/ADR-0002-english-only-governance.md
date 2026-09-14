@@ -3,7 +3,7 @@
 **Date:** 2026-09-14
 **Status:** Accepted
 **Decision-makers:** Capitaine (Jérémie Coste), Arcane (Hermes)
-**Technical context:** itshaker/lowcodai governance (templates, Copilot agents, methodology) — repo `itshaker-copilot-governance`.
+**Technical context:** lowcodai governance ecosystem (templates, Copilot agents, methodology) — repo `itshaker-copilot-governance`.
 **authored_by:** frontier-model
 **execution_mode:** hermes-solo
 **supersedes:** ADR-0001 (language policy only)

@@ -1,6 +1,6 @@
 # itshaker-copilot-governance
 
-> Central governance repository — shared standards, instructions, hooks, policies, agents, and Awesome Copilot references for all itshaker/lowcodai projects.
+> Central governance repository — shared standards, instructions, hooks, policies, agents, and Awesome Copilot references for all lowcodai projects.
 
 ## Role
 
