@@ -24,10 +24,27 @@ itshaker-copilot-governance/
 ├── plugins/            ← Références plugins awesome-copilot
 ├── policies/           ← Politiques: IA, secrets, licences, branch protection
 ├── templates/          ← Templates ADR, BACKLOG, ROADMAP, ISSUE_TEMPLATE, PR_TEMPLATE
+├── hermes/             ← Contrat de continuité Hermes (.hermes.md + squelette docs/operations/)
 ├── docs/               ← Documentation d'usage et stratégie
 ├── scripts/            ← Scripts utilitaires (sync-to-repo.sh)
 └── examples/           ← Exemples de copilot-instructions.md par type de projet
 ```
+
+## Continuité Hermes (`hermes/`)
+
+Source unique du contrat de continuité opérationnelle utilisé par les sessions Hermes
+(cf. ADR-0021 dans `HermesVPS2`) : discipline de checkpoint sous pression de contexte,
+fichiers de suivi obligatoires. Propagé vers chaque projet par
+`sync-governance.sh` (fonction `sync_hermes`), quel que soit le type (`base|infra|ai|app`)
+— la continuité de contexte n'est pas spécifique à un type de projet.
+
+- `hermes/.hermes.md` — le contrat lui-même, à copier tel quel vers `<projet>/.hermes.md`
+  (placeholders `{{PROJECT_NAME}}` / `{{CONTEXT_WINDOW_TOKENS}}` à renseigner une fois
+  dans le projet cible, pas dans ce repo source).
+- `hermes/docs-operations-templates/{CURRENT,HANDOFF,ACTIVITY}.md` — squelettes vides à
+  copier vers `<projet>/docs/operations/` **une seule fois** (ne jamais écraser un fichier
+  déjà en usage — `copy_if_not_exists`, même logique que `sync_instructions`).
+
 
 ## Utilisation
 
@@ -50,6 +67,11 @@ itshaker-copilot-governance/
 - **SHA de référence:** `dae77f24132c1d686c30fd5b29aee0d63668d1d2`
 - **Installation skills:** `gh skills install github/awesome-copilot <skill-name>` (gh CLI v2.90.0+)
 - **Installation plugins:** `copilot plugin install <name>@awesome-copilot`
+- **`instructions/`, `hooks/`, `agents/` peuplés le 2026-09-14** depuis ce SHA (fix : ces
+  dossiers étaient référencés par `sync-governance.sh` mais absents du repo — le script
+  tournait à vide silencieusement, `log_warn` sans échec). `skills/` et `plugins/` restent
+  volontairement vides : installés via `gh skills install` / `copilot plugin install`
+  directement dans l'environnement cible, pas copiés en fichiers dans ce repo.
 
 ## Matrice de répartition par type de projet
 
