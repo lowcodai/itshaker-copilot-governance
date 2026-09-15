@@ -1,4 +1,4 @@
-# Branch Protection Policy — itshaker
+# Branch Protection Policy — vibecoding
 
 ## Rules for `main`
 

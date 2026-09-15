@@ -2,7 +2,7 @@
 # scripts/fetch-awesome-copilot.sh — Downloads the awesome-copilot elements into governance
 # Usage: ./scripts/fetch-awesome-copilot.sh [--ref <sha>] [--dry-run]
 #
-# This script populates the itshaker-copilot-governance repo from github/awesome-copilot.
+# This script populates the vibecoding-copilot-governance repo from github/awesome-copilot.
 # Run it once at initialization, then again for updates.
 
 set -euo pipefail
@@ -11,7 +11,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 GOVERNANCE_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
 
 # Load the libs from bootstrap if available
-BOOTSTRAP_LIB="${GOVERNANCE_DIR}/../itshaker-bootstrap/scripts/lib"
+BOOTSTRAP_LIB="${GOVERNANCE_DIR}/../vibecoding-bootstrap/scripts/lib"
 if [[ -d "$BOOTSTRAP_LIB" ]]; then
   source "${BOOTSTRAP_LIB}/log.sh"
   source "${BOOTSTRAP_LIB}/fs.sh"

@@ -1,4 +1,4 @@
-# itshaker-copilot-governance
+# vibecoding-copilot-governance
 
 > Central governance repository — shared standards, instructions, hooks, policies, agents, and Awesome Copilot references for all lowcodai projects.
 
@@ -15,7 +15,7 @@ This repository is the **single source of truth** for:
 ## Structure
 
 ```
-itshaker-copilot-governance/
+vibecoding-copilot-governance/
 ├── standards/          ← Conventions (branching, commits, PR, naming, documentation)
 ├── instructions/       ← .instructions.md files sourced from github/awesome-copilot
 ├── hooks/              ← Copilot hooks (tool-guardian, secrets-scanner, etc.)
@@ -51,7 +51,7 @@ mandatory tracking files. Propagated to every project by
 ### Sync governance into an existing project
 
 ```bash
-# From itshaker-bootstrap
+# From vibecoding-bootstrap
 ./scripts/sync-governance.sh --type <base|infra|ai|app> --dest /path/to/project
 ```
 
@@ -83,6 +83,6 @@ When this repository is updated, rerun `sync-governance.sh` in the affected proj
 
 ```bash
 # Update a project
-cd /path/to/itshaker-bootstrap
+cd /path/to/vibecoding-bootstrap
 ./scripts/sync-governance.sh --type infra --dest /path/to/my-project --extend-only
 ```

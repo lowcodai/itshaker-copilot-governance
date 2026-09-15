@@ -1,4 +1,4 @@
-# Pull Request Conventions — itshaker
+# Pull Request Conventions — vibecoding
 
 ## Title
 

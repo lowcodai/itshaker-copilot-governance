@@ -1,11 +1,11 @@
-# Naming Conventions — itshaker
+# Naming Conventions — vibecoding
 
 ## Repositories
 
 | Pattern | Example | Usage |
 |---------|---------|-------|
-| `itshaker-template-<type>` | `itshaker-template-base` | GitHub templates |
-| `itshaker-<function>` | `itshaker-bootstrap` | Internal tools |
+| `vibecoding-template-<type>` | `vibecoding-template-base` | GitHub templates |
+| `vibecoding-<function>` | `vibecoding-bootstrap` | Internal tools |
 | `<project>-<stack>` | `my-api-node`, `my-infra-aws` | Business projects |
 
 ## Branches
@@ -32,6 +32,6 @@
 
 ## GitHub Labels
 
-See `config/labels.yml` in itshaker-bootstrap.
+See `config/labels.yml` in vibecoding-bootstrap.
 
 Format: `<category>: <value>` (e.g. `type: bug`, `priority: high`)

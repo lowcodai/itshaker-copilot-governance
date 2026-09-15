@@ -3,7 +3,7 @@
 **Date:** 2026-09-14
 **Statut:** Proposé — Superseded by ADR-0002 (language policy)
 **Décideurs:** Capitaine (Jérémie Coste), Arcane (Hermes)
-**Contexte technique:** gouvernance itshaker (templates, agents Copilot, méthodologie) — repo `itshaker-copilot-governance`.
+**Contexte technique:** gouvernance itshaker (templates, agents Copilot, méthodologie) — repo `vibecoding-copilot-governance`.
 **authored_by:** frontier-model (cet ADR est rédigé par Claude Sonnet 5 dans ce plan)
 **execution_mode:** hermes-solo (l'implémentation de ce plan lui-même se fait en Mode A — pas de délégation OpenHands nécessaire pour du travail documentaire/gouvernance)
 
@@ -45,7 +45,7 @@ Détail complet de la chaîne, des critères de choix de mode et des templates :
 
 ### Positives
 - Traçabilité intention → décision → exécution pour tout futur travail gouverné par
-  `itshaker-copilot-governance`.
+  `vibecoding-copilot-governance`.
 - Flexibilité de coût : un PRD/ADR `local-model` reste valide et exécutable, jamais bloqué.
 - Généralisation d'un pattern déjà validé (`ADR-0020`) plutôt qu'invention d'un nouveau.
 

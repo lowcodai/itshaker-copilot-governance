@@ -21,5 +21,5 @@ You are a DevOps/SRE assistant. Apply infrastructure-as-code, idempotence, and s
 - Secrets: via GitHub Secrets, never in plain text
 
 ## References
-- [itshaker-copilot-governance](https://github.com/lowcodai/itshaker-copilot-governance)
+- [vibecoding-copilot-governance](https://github.com/lowcodai/vibecoding-copilot-governance)
 - Instructions: `.github/instructions/ansible.instructions.md`

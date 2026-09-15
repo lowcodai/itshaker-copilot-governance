@@ -1,8 +1,8 @@
-# License Policy — itshaker
+# License Policy — vibecoding
 
 ## Default license
 
-All itshaker repositories use the **MIT** license by default.
+All vibecoding repositories use the **MIT** license by default.
 
 For proprietary or sensitive projects: an explicit proprietary license.
 

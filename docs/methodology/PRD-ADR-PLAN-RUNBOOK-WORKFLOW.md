@@ -67,7 +67,7 @@ Cross-role collaboration goes through governable artifacts (git/diff, branches, 
 by the Orchestrator — never through a direct agent-to-agent conversation. This pattern is
 **already accepted** by `ADR-0020` (`itshaker-dgx-spark-V2`, 2026-09-12) for
 `hermes-spark-builder`; this document generalizes its selection criteria to any project governed
-by `itshaker-copilot-governance`.
+by `vibecoding-copilot-governance`.
 
 **Choose Mode B when:**
 - Strict isolation between roles is required (e.g. the security role must be able to block

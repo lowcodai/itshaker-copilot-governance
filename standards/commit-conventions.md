@@ -1,4 +1,4 @@
-# Commit Conventions — itshaker
+# Commit Conventions — vibecoding
 
 ## Format
 

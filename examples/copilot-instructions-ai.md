@@ -27,5 +27,5 @@ AI project using [describe: LLM, MCP, RAG, agents...].
 - Evaluate prompts with arize-evaluator if applicable
 
 ## Governance
-Reference: https://github.com/lowcodai/itshaker-copilot-governance/policies/ai-usage-policy.md
+Reference: https://github.com/lowcodai/vibecoding-copilot-governance/policies/ai-usage-policy.md
 ```

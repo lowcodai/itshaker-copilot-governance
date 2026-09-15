@@ -20,5 +20,5 @@ You are a full-stack/API developer assistant. Apply SOLID principles, OWASP secu
 - Accessibility: check with axe-core or pa11y before merge
 
 ## References
-- [itshaker-copilot-governance](https://github.com/lowcodai/itshaker-copilot-governance)
+- [vibecoding-copilot-governance](https://github.com/lowcodai/vibecoding-copilot-governance)
 - Instructions: `.github/instructions/a11y.instructions.md`
